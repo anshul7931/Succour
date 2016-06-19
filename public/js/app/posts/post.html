@@ -1,0 +1,51 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <title> contact list app </title>
+    <style>
+        .rcorners2 {border-radius: 35px;
+            border: 1px solid grey;
+            padding: 12px; 
+            width: 250px;
+            height: 12px; 
+                }
+        .color1{
+            color:red;
+         }
+        *:focus {
+            outline: none;
+         }
+
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js">
+    
+</script>
+<script src='/js/app/posts/post.js'></script>
+<body >
+    <div class="container" ng-controller="AppCtrl2">
+       <table class="table">
+            
+            <tbody>
+                <tr>
+                    <td><textarea rows="2" cols="30" class="form-control" ng-model="tweet.post"></textarea></td>
+                   
+                    <td><button class="btn btn-primary" ng-click="addpost()">Post</button></td>
+                </tr>
+                <tr ng-repeat="tweet in tweets">
+                    <td><span ng-bind="tweet.post"></span></td>
+                   
+                </tr>
+            </tbody>    
+        </table>
+    </div>
+
+
+</body>
+</html>
+   

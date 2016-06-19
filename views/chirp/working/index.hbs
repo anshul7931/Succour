@@ -1,0 +1,43 @@
+<html ng-app="webApp">
+	
+	<head>
+		<link rel ="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"></link>
+		<script src="node_modules/angular/angular.js"></script>
+		<link rel="stylesheet" href="app/css/main.css">
+		<script src="app/app.js"></script>	
+		<script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+
+		<!-- Controllers -->
+		<script src="app/signup/signup-controller.js"></script>		
+		<script src="app/navigation/navigation-controller.js"></script>
+		<script type="text/javascript" src="app/profile/edit-profile-controller.js"></script>
+		<script type="text/javascript" src="app/main/main-controller.js"></script>
+		<script type="text/javascript" src="app/follow/follow-controller.js"></script>
+
+		<!-- libraries -->
+		<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
+		<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+		<script type="text/javascript" src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+
+		<nav class = "navbar-fixed-top"  style="background-color:#000" ng-controller="NavigationController">
+        	<div class="container">
+        		<div ng-show="!loggedIn">
+        			<input type="text" ng-model="login.email"><input type="password" ng-model="login.password"> 
+        			<button ng-click="logUserIn()">Login</button> 
+        			<a style="color:#1C79AF" ui-sref="signup">Create An Account&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        		</div>
+        		<div ng-show="loggedIn"> <a style="color:#1C79AF" ui-sref="editProfile">Edit Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        			<a style="color:#1C79AF" ui-sref="follow">Follow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        			<a style="color:#aa0000;float:right" ng-click="logOut()">LogOut</a></div>
+        	</div>
+        </nav>
+	</head>
+
+	
+
+	<body> 
+        <div ui-view></div>
+	</body>
+	
+
+</html>

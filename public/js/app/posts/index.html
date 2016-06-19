@@ -1,0 +1,56 @@
+<head>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <title> contact list app </title>
+    <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #007;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+li a:hover:not(.active) {
+    background-color: #A9A9A9;
+    text-decoration:none;
+    color: #000000;
+}
+
+li a.active {
+    color: #A9A9A9;
+    background-color: grey;
+    text-decoration:none;
+}
+</style>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>-->
+<script src="/bower/angular/angular.min.js"></script>
+</head>
+
+<body>
+        <div  class="menu-main-menu-container" style="text-align:center;margin-left:10px;margin-top:30px;margin-bottom:300px" ng-controller="AppCtrl2">  
+            <ul id="menu-main-menu" class="nav-menu anshul">
+                <li><a href="/posts/post" style="color:#1C79AF" target="open">Posts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="/posts/contact" style="color:#1C79AF" target="open">Available Contacts</a></li>
+                <li><a href="/posts/index1" style="color:#1C79AF" target="open">Add My Information</a></li>    
+                <li><a href="/chirp" style="color:#1C79AF" target="open">Chirp</a></li>
+                <li><a href="/posts/about" style="color:#1C79AF" target="open">About Developers</a></li>
+            </ul>
+        </div>
+</body>

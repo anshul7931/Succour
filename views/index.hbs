@@ -1,0 +1,31 @@
+<div class="textwidget margin-top-30" style="padding-left:3em">
+    <p>To provide fast, free, reliable and comprehensive information to our users.</p>
+    
+   
+    <p >Simply create an account to get started, select items from a menu, and we'll have food delivered directly to your room, within an hour, or your meal is free. The only difficult part is choosing. (Sorry, we can't help you with that.)</p>
+</div>
+<div class="widget" style="padding-left:3em" >
+    <form name="login-form" id="login-form" method="post" action="/users/login">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="rcorners2" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="rcorners2" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+            <label for="rememberMe">Remember Me</label>
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Log in" />
+            {{#if error}}
+            <div style="color:red;">{{error}}</div>
+            {{/if}}
+            <div class="margin-top-30">
+                or <a style="color:#aaa" href="/users/create">Create an account</a>
+            </div>
+        </div>
+    </form>
+</div>

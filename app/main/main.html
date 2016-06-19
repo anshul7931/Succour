@@ -1,0 +1,43 @@
+<div class="col-sm-10 col-sm-offset-1">
+	<div class= 'row'  ng-show="loggedIn">
+		<span class="col-sm-8 col-lg-8 col-md-8 col-xs-8">
+			<textarea
+			    ng-model="newWaste"
+			    style="resize:none" cols="20"			
+				class="form-control"
+				placeholder="Post Waste... then press Enter">
+			</textarea>
+		</span>
+		<span class="col-sm-2 col-lg-2 col-md-2  col-xs-2">
+        	<button class="btn btn-primary" ng-click="sendWaste()"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Post!</button>
+      	</span>
+	</div> 
+	<!--<table class="table table-responsive" ng-show="loggedIn">
+            
+            <tr>
+                    <td><textarea rows="2" cols="30" class="form-control ng-pristine ng-valid" ng-model="newWaste" placeholder="Post Waste...then Press Enter"></textarea></td>
+                   
+                    <td><button class="btn btn-primary" ng-click="sendWaste()"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Post</button></td>
+            </tr>
+             
+     </table> -->
+	 
+	 
+	<div class = "row" style="margin-top:9">
+		<table class="waste-section table-responsive table-condensed">
+			<tbody>
+			<tr> <a ng-show="incomingWastes" ng-click="setNewWastes()" class="ng-binding"> You have got {{difference}} new wastes</a></tr> 
+			<tr ng-repeat="waste in wastes" class="table-hover">
+				<td>{{waste.user}}
+					<image ng-src="{{waste.userImage}}" class = "img-responsive img-rounded">
+				</td>
+
+				<td class="">
+					<strong>{{waste.date | date : 'dd/MM/yyyy hh:mm:ss'}}</strong><br>
+					<p> {{waste.content}}</p>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

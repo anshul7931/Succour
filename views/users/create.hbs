@@ -1,0 +1,60 @@
+<div class="textwidget margin-top-30">
+    <p>To provide fast, free, reliable and comprehensive information to our users.</p>
+    <p>Simply create an account to get started, select items from a menu, and we'll have food delivered directly to your room, within an hour, or your meal is free. The only difficult part is choosing. (Sorry, we can't help you with that.)</p></p>
+</div>
+<div class="widget">
+    <form name="create-user-form" id="create-user-form" method="post" >
+        <div class="form-group">
+            <label for="firstName" >First name</label>
+            <input type="text" id="firstName" class="rcorners2" name="firstName" required value="{{input.firstName}}"/>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" class="rcorners2" name="lastName" required value="{{input.lastName}}"/>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="rcorners2" name="email" required value="{{input.email}}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="Occupation">Occupation</label>
+            <input type="text" id="Occupation" class="rcorners2" name="Occupation" required value="{{input.email}}"/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="rcorners2" name="password" autocomplete="off" required value="{{input.password}}"/>
+        </div>
+         <div class="form-group">
+            <label for="Confirm">Confirm Password</label>
+            <input type="password" id="confirm" class="rcorners2" name="confirm" autocomplete="off" required onblur = "validatePassword()"/>
+            <label style="color:red;" id="errormsg"></label>
+        </div>
+        <div class="form-submit">
+            <input type="submit" value="Create my account" id="sbmt"/>
+        </div>
+        
+        <span style="color:red">{{error}}</span>
+    </form>
+    
+    <script type="text/javascript">
+        function validatePassword(){
+            var password = document.getElementById('password').value;
+            var confirm = document.getElementById('confirm').value;
+            var submt = document.getElementById('sbmt');
+                 if(password != confirm) {
+
+                    document.getElementById("errormsg").innerHTML="Password does not match";
+                    sbmt.disabled = true;
+                  } else {
+                    //confirm.setCustomValidity('');
+                    document.getElementById("errormsg").innerHTML="Password matched";
+                    sbmt.disabled = false;
+                  }
+        }
+        
+    </script>
+
+</div>

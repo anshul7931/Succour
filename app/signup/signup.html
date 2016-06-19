@@ -1,0 +1,25 @@
+ <div class="col-sm-6 col-sm-offset-3">
+ <div class="row">
+ 	<div class="col-sm-6">
+ 		<ng-form name = "signup">
+ 		<br>
+	 		<div class="row" ng-class="{ 'has-error' : signup.emal.$invalid, 'has-success': signup.emal.$valid}">
+	 			<span class="input-group">
+		 			<span class="input-group-addon" id="basic-addon1">@</span>
+		 			<input type="email" name="emal" ng-model="newUser.email" placeholder="Email Address" class="form-control" ng-required="true" ng-trim="true" aria-describedby="basic-addon1"/>
+	 			</span> <label ng-show="signup.emal.$invalid " class="help-block">Correct Email is required.</label>
+	 		</div>
+	 		<br>
+	 		<div class="row" ng-class="{ 'has-error' : signup.pass.$invalid, 'has-success': signup.pass.$valid}">
+	 			<strong>Password: </strong>
+	 			<span class="input-group">
+	 				<span class="input-group-addon" id="basic-addon2">*</span>
+	 				<input type="password" name ="pass"ng-model="newUser.password" class="form-control" ng-required="true" ng-minlength="6" ng-trim="true" aria-describedby="basic-addon2"/>
+	 			</span>
+	 			<label ng-show="signup.pass.$invalid " class="help-block">Password of atleast 6 characters is required.</label>
+	 		</div>
+	 		<br>
+	 		<button ng-click="signup.$valid && createUser()"  class="btn btn-lg btn-success col-sm-offset-4" ng-disabled="signup.$invalid">Submit</button>	 		
+ 		</ng-form>
+ 	</div>
+ </div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{{#if title}}{{title}}{{/if}}</title>
+        <meta name="description" content="To provide fast, free, reliable and comprehensive information to our users.
+    Simply create an account to get started, select items from a menu, and we'll have food delivered directly to your room, within an hour, or your meal is free. The only difficult part is choosing. (Sorry, we can't help you with that." />
+        <link rel="stylesheet" href="/stylesheets/wp-backgrounds.css" type='text/css' media='all' />
+        <link rel='stylesheet' href="/stylesheets/mjCont.css" type='text/css' media='all' />
+        <link rel='stylesheet' href='/stylesheets/front.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='/stylesheets/style.css' type='text/css' media='all' />
+        <link id="twentytwelve-fonts-css" media="all" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" rel="stylesheet">
+        <script type='text/javascript' src='/js/jquery.js'></script>
+        <script type='text/javascript' src='/js/wp-backgrounds.js'></script>
+        <script type='text/javascript' src="/js/main.js"></script>
+
+        <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+        <link rel="icon" href="/images/favicon.ico">
+        <script src="/js/bootstrap.js"></script>
+
+    </head>
+    <body class="custom-font-enabled">
+        <div id="page">
+	        <header id="masthead" class="site-header" role="banner">
+		       
+                <a href="#"><img src="/images/cropped-landon_hotel_header_960x85.png" class="header-image" width="1340" height="10" alt="" /></a>
+		       
+            </header>
+            {{#if firstName}}
+            <div id="greeting" style="float:right">
+                <strong>Hi {{firstName}} !</strong>
+                <a href="users/logout" style="color:red;">Log Out</a>
+            </div>
+            {{/if}}
+	        <div id="main" class="wrapper">
+	            <div id="primary" class="site-content">
+		            <div id="content" role="main">
+                        <div>
+							<div id="pg-218-0">
+								
+								<div>									
+									<div id="page-content">
+										<!--BEGIN page-specific content -->
+                                        		
+										{{{body}}}
+										
+										<!-- END page-specific content -->
+									</div>									
+								</div>
+							</div>
+						</div>    
+                    </div>
+	            </div>
+            </div>
+	        <footer id="colophon" role="contentinfo">
+		        <div class="site-info">
+			        <p title="Description">The succour is a medium created for the purpose of providing help to people.Foreign Delegates  coming, No idea about cuisine!! Here you go with best restaurants list, Battery leakage - we will provide you electricians number. You name it and we have the expertise for it .From plumber to surgeon. 
+                    Everybody under one app. Just one click and you will have the contact of your solution . We provide you simple and quick solution for your problems.</p>
+		        </div>
+	        </footer>
+        </div>        
+    </body>
+</html>

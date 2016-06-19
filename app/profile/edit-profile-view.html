@@ -1,0 +1,20 @@
+ <div class="col-sm-6 col-sm-offset-3">
+ 	<br>
+ 	<div class="col-sm-6">
+	 	<div class = "row">
+	 		<span class = "glyphicon glyphicon-user btn btn-info" ngf-select ng-model="File" name="file" ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-resize="{width: 400, height: 400}" style="font-size:72;" ng-hide="File"></span> <img height="100" width="100" ng-show="File" ngf-thumbnail="File" class="thumb"> <button ng-click="File = null" ng-show="File">Remove</button></div>
+		<br>
+		<div class="row">
+			<input class="form-control" ng-model="user.username" placeholder="Display name" >
+		</div>
+		<br>
+		<div class="row">
+			<textarea class="form-control" ng-model="user.bio" placeholder="Update Bio"></textarea>
+		</div>
+		<br>
+		<div class="row">
+			<span class="col-sm-5"><button class="btn btn-primary" ng-click="addDetails()"  ng-disabled="!File">Add Details</button></span>
+			<span class="col-sm-7"><p class="text-danger" ng-hide="File">Please Insert Image</p></span>
+		</div>
+	</div>
+</div>

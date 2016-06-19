@@ -1,0 +1,53 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <title> contact list app </title>
+    <style>
+        .rcorners2 {border-radius: 35px;
+            border: 1px solid grey;
+            padding: 12px; 
+            width: 250px;
+            height: 12px; 
+                }
+        .color1{
+            color:red;
+         }
+        *:focus {
+            outline: none;
+         }
+
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js">
+    
+</script>
+<script src='/js/app/posts/post.js'></script>
+<body >
+    <div class="container" ng-controller="AppCtrl">
+        <h3> Enter Your Details here : </h3>
+       <h5><br> Make sure that the <b><em>Contact Details</em></b> you enter are correct.<br> This information would be available to all our users so that they may contact you as per their requirements and needs.<br><br><br></h5>
+
+                    <input  ng-model="contact.name" placeholder="NAME" ><br><br>
+                    <input  ng-model="contact.email" placeholder="EMAIL" ><br><br>
+                    <input  ng-model="contact.number" placeholder="CONTACT NUMBER" ><br><br>
+                    Select Occupation <br>
+                    <select ng-model="contact.occupation"> 
+                    <option >masson</option>
+                    <option >doctor</option>
+                    <option >electricians</option>
+                    </select>
+                    <br><br><br>
+                    <button class="btn btn-primary" ng-click="addContact()">Add Contact</button>
+                    
+                
+    </div>
+
+
+</body>
+</html>
+   
